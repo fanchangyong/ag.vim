@@ -122,6 +122,7 @@ function! ag#Ag(cmd, args)
   if exists("g:ag_highlight")
     let @/=a:args
     set hlsearch
+    call feedkeys(":let &hlsearch=1\<CR>", "n")
   end
 
   redraw!
